@@ -1,17 +1,14 @@
-import React, { useRef, useState } from "react";
-import SwiperCore, { Navigation } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
-// Import Swiper styles
-import "swiper/css";
-import Image from "next/image";
+import React, { useState } from "react";
+import { Navigation } from "swiper";
+import { Swiper, SwiperSlide, } from "swiper/react";
+import SwiperNav from "./SwiperNav";
 
-SwiperCore.use([Navigation]);
+// SwiperCore.use([Navigation]);
 
 const WorksBlockSwiper = (props) => {
   const { title, texts, images } = props;
-  const prev = useRef(null);
-  const next = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+
 
   return (
     <div className="c-works-block-swiper">
@@ -22,14 +19,6 @@ const WorksBlockSwiper = (props) => {
           <Swiper
             slidesPerView={1}
             speed=".6s"
-            navigation={{
-              nextEl: prev.current,
-              prevEl: next.current,
-            }}
-            onBeforeInit={(swiper) => {
-              swiper.params.navigation.prevEl = prev.current;
-              swiper.params.navigation.nextEl = next.current;
-            }}
             onSlideChange={(e) => setCurrentIndex(e.activeIndex)}
           >
             {images.map((image, i) => (
@@ -42,23 +31,9 @@ const WorksBlockSwiper = (props) => {
                 />
               </SwiperSlide>
             ))}
+             <SwiperNav />
           </Swiper>
-          <div className="c-works-block-swiper__nav">
-            <div ref={prev}>
-              <Image
-                src="/icon-prev.svg"
-                alt="Picture of the author"
-                layout="fill"
-              />
-            </div>
-            <div ref={next}>
-              <Image
-                src="/icon-next.svg"
-                alt="Picture of the author"
-                layout="fill"
-              />
-            </div>
-          </div>
+         
         </div>
         <div className="c-works-block-swiper__captions">
           <p>{texts[currentIndex]}</p>

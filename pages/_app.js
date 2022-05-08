@@ -9,11 +9,11 @@ import "../styles/components/WorksTop.scss";
 import "../styles/components/WorksBlockSimple.scss";
 import "../styles/components/WorksBlockSwiper.scss";
 import "../styles/components/About.scss";
+import "swiper/css/bundle";
 import Layout from "../components/Layout";
 import { AnimatePresence } from "framer-motion";
 
 function MyApp({ Component, pageProps, router }) {
-  console.log(router.route);
   return (
     <Layout>
       <AnimatePresence
