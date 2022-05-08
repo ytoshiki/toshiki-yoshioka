@@ -1,0 +1,69 @@
+.c-works-top {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  width: 100%;
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media only screen and (max-width: 750px) {
+    display: block;
+    padding-top: 10%;
+  }
+
+  h1 {
+    flex: none;
+    margin: 0 4% 0 0;
+    font-family: "Raleway", sans-serif;
+    width: 40%;
+
+    @media only screen and (max-width: 750px) {
+      width: 100%;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  p {
+    width: 60%;
+    margin: 0;
+    line-height: 1.75;
+    font-size: 1.05rem;
+
+    @media only screen and (max-width: 750px) {
+      width: 100%;
+      font-size: 0.85rem;
+    }
+    // font-family: serif, sans-serif, Arial, Helvetica, sans-serif;
+  }
+
+  a {
+    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: underline;
+    margin-right: 1.25rem;
+
+    @media only screen and (max-width: 750px) {
+      display: block;
+
+      &:not(:last-child) {
+        margin-bottom: 0.25rem;
+        font-size: 0.8rem;
+      }
+    }
+
+    img {
+      width: 16px;
+      position: relative;
+      top: 2px;
+      margin-right: 0.25rem;
+
+      @media only screen and (max-width: 750px) {
+        width: 15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+.l-footer {
+  padding: 8% 0 6%;
+  font-family: serif, sans-serif, Arial, Helvetica, sans-serif;
+
+  &__content {
+    display: flex;
+
+    @media only screen and (max-width: 750px) {
+      display: block;
+    }
+  }
+
+  &__block {
+    width: 33.3%;
+
+    @media only screen and (max-width: 750px) {
+      width: 100%;
+    }
+  }
+
+  &__label {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin: 0;
+
+    @media only screen and (max-width: 750px) {
+      font-size: 0.9rem;
+    }
+  }
+
+  &__text {
+    @media only screen and (max-width: 750px) {
+      margin-top: 0.25rem;
+    }
+  }
+
+  &__links {
+    display: flex;
+    padding: 0;
+
+    @media only screen and (max-width: 750px) {
+      margin-top: 0.25rem;
+    }
+
+    li {
+      list-style: none;
+      display: block;
+      &:not(:last-child) {
+        margin-right: 0.5rem;
+      }
+    }
+
+    a {
+      display: inline-block;
+      font-size: 1.1rem;
+      text-decoration: underline;
+
+      @media only screen and (max-width: 750px) {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

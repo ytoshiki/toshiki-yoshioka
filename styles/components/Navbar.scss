@@ -1,0 +1,28 @@
+.navbar {
+  padding-top: 6%;
+  ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  li {
+    list-style: none;
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+
+  a {
+    color: #323649;
+    font-size: 23px;
+    font-weight: 400;
+
+    @media only screen and (max-width: 750px) {
+      font-size: 1.3rem;
+    }
+
+    &.is-current {
+      text-decoration: line-through;
+    }
+  }
+}

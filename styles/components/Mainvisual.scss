@@ -1,0 +1,18 @@
+.c-mainvisual {
+  h1 {
+    margin-top: 8%;
+    margin-bottom: 8%;
+    font-family: "Raleway", sans-serif;
+    color: #323649;
+    font-size: 30px;
+    font-weight: 500;
+    text-align: left;
+    line-height: 1.5;
+
+    @media only screen and (max-width: 750px) {
+      font-size: 28px;
+      margin-top: 30%;
+      margin-bottom: 20%;
+    }
+  }
+}

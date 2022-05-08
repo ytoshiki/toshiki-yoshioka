@@ -1,0 +1,75 @@
+.c-works-block-simple {
+  &:not(:last-child) {
+    margin-bottom: 20%;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin: 14% 0 5%;
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+
+    @media only screen and (max-width: 750px) {
+      font-size: 1.2rem;
+      padding: 16% 0 10%;
+    }
+  }
+
+  &__row {
+    & > div {
+      display: flex;
+      justify-content: center;
+    }
+
+    img {
+      width: 50px;
+      display: block;
+
+      @media only screen and (max-width: 750px) {
+        width: 30px;
+      }
+
+      &:not(:last-child) {
+        margin-right: 5%;
+
+        @media only screen and (max-width: 750px) {
+          margin-right: 6%;
+        }
+      }
+    }
+  }
+
+  &__links {
+    margin-top: 18%;
+
+    @media only screen and (max-width: 750px) {
+      display: block !important;
+    }
+
+    a {
+      font-size: 1rem;
+      display: inline-flex;
+      align-items: center;
+      text-decoration: underline;
+      margin-right: 2rem;
+
+      @media only screen and (max-width: 750px) {
+        font-size: 0.8rem;
+        &:not(:last-child) {
+          margin-bottom: 0.25rem;
+        }
+      }
+
+      img {
+        width: 20px;
+        position: relative;
+        top: 0px;
+        margin-right: 0.3rem;
+
+        @media only screen and (max-width: 750px) {
+          width: 15px;
+        }
+      }
+    }
+  }
+}

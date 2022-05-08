@@ -1,0 +1,7 @@
+.l-main {
+  padding-bottom: 10rem;
+
+  @media only screen and (max-width: 750px) {
+    padding-bottom: 8rem;
+  }
+}
